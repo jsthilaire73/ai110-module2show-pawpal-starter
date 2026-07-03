@@ -4,8 +4,16 @@
 
 **a. Initial design**
 
-- Briefly describe your initial UML design.
-- What classes did you include, and what responsibilities did you assign to each?
+Our initial system design consists of four core classes:
+- **Owner**: Tracks the owner's name and a list of pets. It handles adding new pets and pulling all combined tasks.
+- **Pet**: Tracks individual pet profiles (name and species) and manages their specific task lists.
+- **Task**: Represents a single care activity, storing its description, time, frequency, and completion status.
+- **Scheduler**: The system's algorithmic brain. It handles cross-pet sorting, filtering, and conflict detection.
+
+Core User Actions Supported:
+- **Add a Pet:** Handled by `Owner.add_pet()`
+- **Schedule a Routine:** Handled by `Pet.add_task()`
+- **View Today's Tasks:** Handled by `Owner.get_all_tasks()` and processed by the `Scheduler`.
 
 **b. Design changes**
 
