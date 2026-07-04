@@ -32,6 +32,7 @@ Our scheduler makes a classic greedy algorithmic tradeoff. In Scheduler.filter_b
 Why this is reasonable: While this doesn't guarantee a mathematically perfect knapsack optimization, it perfectly mirrors real-world human preferences. Owners would always prefer to guarantee their pet gets their critical 10-minute medicine rather than fitting three minor 20-minute play sessions just to maximize "completed" tasks.
 
 AI COLLABORATION
+
 a. How you used AI
 AI tools were heavily utilized during this project as structural architects, debugging assistants, and testing advisors:
 Design Brainstorming: Used AI to translate the original project description into clean class structures.
@@ -43,6 +44,7 @@ A major moment of intervention occurred during the development of Scheduler.dete
 How I verified and evaluated: I rejected the naive nested-loop solution. Instead, I structured a single-pass evaluation using a Python dictionary tracker. I mapped out specific unit tests to manually inspect and prove that my refined, single-pass conflict tracker resolved overlaps correctly.
 
 TESTING AND VERIFICATION
+
 a. What you tested
 The test suite in tests/test_pawpal.py targets five critical system capabilities:
 Task Completion Status (test_task_completion): Assures marking a task completed correctly mutates its boolean state.
@@ -55,6 +57,7 @@ b. Confidence
 I am highly confident that the scheduler works correctly. The entire test suite compiles and passes successfully in under 0.15 seconds.
 
 REFLECTION
+
 a. What went well
 I am incredibly satisfied with how cleanly the data persistence layer integrated with the interactive Streamlit UI.
 
