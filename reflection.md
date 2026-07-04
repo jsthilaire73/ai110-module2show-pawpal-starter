@@ -19,6 +19,7 @@ The Change: Initially, the system was designed to handle task sorting and filter
 Why We Made It: If we kept tasks isolated to individual Pet instances, we could not easily detect conflicts. We refactored the design to aggregate all tasks up to the Owner level using owner.get_all_tasks(). This combined list is then processed by static utility methods in the Scheduler class. This decoupled architecture made both global conflict resolution and multi-pet daily scheduling extraordinarily clean and straightforward.
 
 SCHEDULING LOGIC AND TRADEOFFS
+
 a. Constraints and priorities
 The scheduler considers three distinct types of constraints and metadata:
 Priority Rank (Hard Constraint): Tasks are evaluated in order of priority level (Priority 1 = High, 3 = Low).
