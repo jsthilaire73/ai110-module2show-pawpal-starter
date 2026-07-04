@@ -31,8 +31,6 @@ Problems noticed: Minor adjustments needed for logic flow and attribute naming.
 
 Decision: Accepted as the foundation for the project.
 
-
-
 Option B
 
 Model / tool used: ChatGPT
