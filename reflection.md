@@ -1,6 +1,7 @@
  PAWPAL+ PROJECT REFLECTION
 
 SYSTEM DESIGN
+
 a. Initial design
 Our initial system design consists of four core classes:
 Owner: Tracks the owner's name and a list of pets. It handles adding new pets and pulling all combined tasks.
