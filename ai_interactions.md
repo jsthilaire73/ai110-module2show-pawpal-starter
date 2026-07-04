@@ -7,7 +7,6 @@ What task did you give the agent?
 I asked the agent to implement the Scheduler's filter_by_time_budget method based on the established Owner/Pet/Task class structure.
 
 What did the agent do?
-
 The agent generated the logic to iterate through tasks across multiple pets, calculate the total duration, and compare it against the user-provided time budget.
 
 What did you have to verify or fix manually?
