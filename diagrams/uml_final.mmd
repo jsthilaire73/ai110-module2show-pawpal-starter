@@ -1,0 +1,38 @@
+classDiagram
+    class Owner {
+        +string name
+        +List~Pet~ pets
+        +add_pet(Pet pet)
+        +get_all_tasks() List~Task~
+        +save_to_json(filename)
+        +load_from_json(filename) Owner
+    }
+
+    class Pet {
+        +string name
+        +string species
+        +List~Task~ tasks
+        +add_task(Task task)
+    }
+
+    class Task {
+        +string description
+        +string time
+        +string frequency
+        +int duration
+        +int priority
+        +bool is_completed
+        +mark_complete()
+    }
+
+    class Scheduler {
+        <<static>>
+        +sort_by_priority_and_time(List~Task~ tasks) List~Task~
+        +detect_conflicts(List~Task~ tasks) List~string~
+        +filter_by_time_budget(List~Task~ tasks, int available_minutes) List~Task~
+        +generate_schedule_reasoning(List~Task~ scheduled, int total_count, int budget) string
+    }
+
+    Owner "1" *-- "*" Pet : manages
+    Pet "1" *-- "*" Task : contains
+    Scheduler ..> Task : processes
