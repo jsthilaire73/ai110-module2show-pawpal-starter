@@ -3,12 +3,15 @@
 Agent Workflow (SF7)
 
 What task did you give the agent?
+
 I asked the agent to implement the Scheduler's filter_by_time_budget method based on the established Owner/Pet/Task class structure.
 
 What did the agent do?
+
 The agent generated the logic to iterate through tasks across multiple pets, calculate the total duration, and compare it against the user-provided time budget.
 
 What did you have to verify or fix manually?
+
 The initial code failed to handle cases where a pet had no tasks assigned. I manually added an empty-list check and refined the type hints to ensure compatibility with my existing class hierarchy.
 
 Prompt Comparison (SF11)
