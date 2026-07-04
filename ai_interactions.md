@@ -18,20 +18,33 @@ The initial code failed to handle cases where a pet had no tasks assigned. I man
 Prompt Comparison (SF11)
 
 Option A
+
 Model / tool used: Gemini
+
 Prompt: Act as a software architect. Define OOP classes (Owner, Pet, Task, Scheduler) with specific attributes and JSON persistence methods.
+
 Response summary: Provided highly modular, well-structured code with robust JSON handling and clear type hints.
+
 What was useful: The persistence methods were ready-to-use and matched my UML design.
+
 Problems noticed: Minor adjustments needed for logic flow and attribute naming.
+
 Decision: Accepted as the foundation for the project.
 
 Option B
+
 Model / tool used: ChatGPT
+
 Prompt: Act as a software architect. Define OOP classes (Owner, Pet, Task, Scheduler) with specific attributes and JSON persistence methods.
+
 Response summary: Provided a functional base, but the JSON serialization logic was less robust and required more boilerplate code.
+
 What was useful: Class hierarchy structure was correct.
+
 Problems noticed: Persistence logic was fragile; required significant refactoring for production-level error handling.
+
 Decision: Rejected as a primary codebase.
 
 Which approach did you use in your final implementation and why?
+
 I used the Gemini approach (Option A). The persistence logic provided was significantly cleaner and required less maintenance than the output from Option B, allowing for faster integration into my existing codebase.
