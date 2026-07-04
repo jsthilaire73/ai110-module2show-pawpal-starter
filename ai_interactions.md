@@ -1,4 +1,4 @@
-AI Interactions Log
+**AI Interactions Log**
 
 Agent Workflow (SF7)
 
