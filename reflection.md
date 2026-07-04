@@ -1,6 +1,7 @@
  PAWPAL+ PROJECT REFLECTION
 
 SYSTEM DESIGN
+
 a. Initial design
 Our initial system design consists of four core classes:
 Owner: Tracks the owner's name and a list of pets. It handles adding new pets and pulling all combined tasks.
@@ -18,6 +19,7 @@ The Change: Initially, the system was designed to handle task sorting and filter
 Why We Made It: If we kept tasks isolated to individual Pet instances, we could not easily detect conflicts. We refactored the design to aggregate all tasks up to the Owner level using owner.get_all_tasks(). This combined list is then processed by static utility methods in the Scheduler class. This decoupled architecture made both global conflict resolution and multi-pet daily scheduling extraordinarily clean and straightforward.
 
 SCHEDULING LOGIC AND TRADEOFFS
+
 a. Constraints and priorities
 The scheduler considers three distinct types of constraints and metadata:
 Priority Rank (Hard Constraint): Tasks are evaluated in order of priority level (Priority 1 = High, 3 = Low).
@@ -30,6 +32,7 @@ Our scheduler makes a classic greedy algorithmic tradeoff. In Scheduler.filter_b
 Why this is reasonable: While this doesn't guarantee a mathematically perfect knapsack optimization, it perfectly mirrors real-world human preferences. Owners would always prefer to guarantee their pet gets their critical 10-minute medicine rather than fitting three minor 20-minute play sessions just to maximize "completed" tasks.
 
 AI COLLABORATION
+
 a. How you used AI
 AI tools were heavily utilized during this project as structural architects, debugging assistants, and testing advisors:
 Design Brainstorming: Used AI to translate the original project description into clean class structures.
@@ -41,6 +44,7 @@ A major moment of intervention occurred during the development of Scheduler.dete
 How I verified and evaluated: I rejected the naive nested-loop solution. Instead, I structured a single-pass evaluation using a Python dictionary tracker. I mapped out specific unit tests to manually inspect and prove that my refined, single-pass conflict tracker resolved overlaps correctly.
 
 TESTING AND VERIFICATION
+
 a. What you tested
 The test suite in tests/test_pawpal.py targets five critical system capabilities:
 Task Completion Status (test_task_completion): Assures marking a task completed correctly mutates its boolean state.
@@ -53,6 +57,7 @@ b. Confidence
 I am highly confident that the scheduler works correctly. The entire test suite compiles and passes successfully in under 0.15 seconds.
 
 REFLECTION
+
 a. What went well
 I am incredibly satisfied with how cleanly the data persistence layer integrated with the interactive Streamlit UI.
 
